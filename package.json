@@ -1,0 +1,55 @@
+{
+  "name": "@luxfi/brand",
+  "version": "1.0.0",
+  "description": "Official brand assets and design system for Lux Finance",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles/*": "./styles/*"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "fonts",
+    "styles"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "luxfi",
+    "lux",
+    "brand",
+    "design-system",
+    "defi",
+    "blockchain",
+    "ui",
+    "assets"
+  ],
+  "author": "Lux Finance",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxfi/brand"
+  },
+  "homepage": "https://github.com/luxfi/brand",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
