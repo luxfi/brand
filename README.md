@@ -1,35 +1,52 @@
-# Brand Guidelines
+# @luxfi/brand
 
-Official brand guidelines and assets.
+Brand assets, design tokens, and runtime config for Lux.
 
-## Contents
+## Install
 
-- `guidelines.pdf` - Complete brand guidelines
-- `colors/` - Color palettes and specifications
-- `typography/` - Font files and usage
-- `templates/` - Document and presentation templates
+```bash
+pnpm add @luxfi/brand
+```
 
-## Quick Reference
+## Usage
 
-### Colors
+```ts
+import { brand, colors, typography, logos, applyTheme } from '@luxfi/brand'
 
-| Name | Hex | Usage |
-|------|-----|-------|
-| Primary | `#000000` | Main brand color |
-| Secondary | `#FFFFFF` | Background |
-| Accent | `#6366F1` | Highlights |
+// Runtime brand config (from brand.json)
+brand.brand.name        // "Lux Exchange"
+brand.brand.shortName   // "LUX"
+brand.brand.appDomain   // "lux.exchange"
 
-### Typography
+// Design tokens
+colors.primary          // "#000000"
+typography.fontFamily   // "Geist, Geist Sans, sans-serif"
 
-- **Headings**: Inter Bold
-- **Body**: Inter Regular
-- **Code**: JetBrains Mono
+// Apply theme to document
+applyTheme('dark')
+```
 
-## Related
+## Brand Config (`brand.json`)
 
-- [identity](../identity) - Soul and values
-- [logo](../logo) - Logo assets
-- [press](../press) - Press kit
+Single source of truth for all brand strings, URLs, and metadata. Loaded at runtime by all Lux apps. White-label products override with their own brand package.
+
+## White-Label
+
+The platform uses ▼ as the universal default mark. When no brand is configured, apps show "▼ Exchange", "▼ Wallet", etc. Brand packages provide the override:
+
+| Org | Package | Name |
+|-----|---------|------|
+| Lux | `@luxfi/brand` | Lux Exchange |
+| Liquidity | `@liquidityio/brand` | Liquidity.io |
+| Zoo | `@zooai/brand` | Zoo Exchange |
+
+## Font
+
+**Geist Sans** (body) + **Geist Mono** (code). Loaded from Google Fonts or self-hosted in `fonts/`.
+
+## Logo
+
+The ▼ triangle mark is in `@luxfi/logo`. This package re-exports it via `logos`.
 
 ## License
 
