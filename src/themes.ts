@@ -2,12 +2,13 @@
  * Theme management for Lux brand
  */
 
+import * as React from 'react'
 import { colors } from './colors'
 import { getCSSVariables } from './colors'
 
 export interface Theme {
   name: string
-  colors: typeof colors
+  colors: Record<string, any>
   cssVariables: Record<string, string>
 }
 
