@@ -3,12 +3,11 @@
  * Pure black/white minimalist theme for Lux Network
  */
 
-import { colors } from './colors'
-
 /**
  * Fumadocs-compatible CSS variables
  */
 export interface DocsThemeVariables {
+  [key: string]: string
   // Core colors
   '--color-fd-background': string
   '--color-fd-foreground': string
