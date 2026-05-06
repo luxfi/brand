@@ -37,8 +37,10 @@ The platform uses ▼ as the universal default mark. When no brand is configured
 | Org | Package | Name |
 |-----|---------|------|
 | Lux | `@luxfi/brand` | Lux Exchange |
-| Liquidity | `@liquidityio/brand` | Liquidity.io |
 | Zoo | `@zooai/brand` | Zoo Exchange |
+| Hanzo | `@hanzoai/brand` | Hanzo |
+
+White-label users of the OSS Lux brand system bring their own brand package; the Lux repo lists only Lux ecosystem brands.
 
 ## Font
 
