@@ -1,0 +1,76 @@
+{
+  "brand": {
+    "name": "Lux Pay",
+    "title": "Lux Pay | Banking, payments, FX, crypto on one rail",
+    "description": "The regulated unified PSP and bridge backend — banking, FX, card issuance, on/off-ramps, and crypto settlement on a single SWIFT/SEPA/Fedwire/FedNow rail.",
+    "shortName": "Pay",
+    "labsName": "Lux Labs",
+    "legalEntity": "Lux Industries Inc.",
+    "walletName": "Lux Pay Wallet",
+    "protocolName": "Lux Pay Protocol",
+    "copyrightHolder": "Lux Industries Inc.",
+    "appDomain": "lux.financial",
+    "appSubdomain": "app.lux.financial",
+    "docsDomain": "docs.lux.financial",
+    "infoDomain": "info.lux.financial",
+    "gatewayDomain": "api.lux.financial",
+    "wsDomain": "ws.lux.financial",
+    "helpUrl": "https://docs.lux.financial/help",
+    "termsUrl": "https://lux.financial/terms",
+    "privacyUrl": "https://lux.financial/privacy",
+    "downloadUrl": "https://lux.financial/app",
+    "complianceEmail": "compliance@lux.financial",
+    "supportEmail": "support@lux.financial",
+    "twitter": "https://x.com/luxfi",
+    "farcaster": "",
+    "linkedin": "",
+    "tiktok": "",
+    "github": "https://github.com/luxfi",
+    "discord": "https://discord.gg/lux",
+    "logoUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/logo.svg",
+    "faviconUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/favicon.svg",
+    "primaryColor": "#000000",
+    "theme": {
+      "light": {
+        "accent1": "#000000",
+        "surface1": "#FFFFFF",
+        "surface2": "#F9F9F9",
+        "neutral1": "#131313",
+        "neutral2": "rgba(19, 19, 19, 0.63)"
+      },
+      "dark": {
+        "accent1": "#FFFFFF",
+        "surface1": "#000000",
+        "surface2": "#1A1A1A",
+        "neutral1": "#FFFFFF",
+        "neutral2": "rgba(255, 255, 255, 0.65)"
+      }
+    }
+  },
+  "chains": {
+    "defaultChainId": 96369,
+    "supported": [96369, 96368, 96367, 1, 42161, 8453, 137, 43114]
+  },
+  "rpc": {
+    "96369": "https://api.lux.network/ext/bc/C/rpc",
+    "96368": "https://api.lux-test.network/ext/bc/C/rpc",
+    "96367": "https://api.lux-dev.network/ext/bc/C/rpc",
+    "1": "https://eth.llamarpc.com",
+    "42161": "https://arb1.arbitrum.io/rpc",
+    "8453": "https://mainnet.base.org",
+    "137": "https://polygon-rpc.com",
+    "43114": "https://api.avax.network/ext/bc/C/rpc"
+  },
+  "api": {
+    "graphql": "https://api.lux.financial/v1/graphql",
+    "gateway": "https://api.lux.financial",
+    "insights": "https://insights.hanzo.ai"
+  },
+  "iam": {
+    "provider": "https://lux.id",
+    "clientId": "lux-pay"
+  },
+  "walletConnect": {
+    "projectId": ""
+  }
+}
