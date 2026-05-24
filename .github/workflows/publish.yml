@@ -1,0 +1,31 @@
+name: Publish to npm
+
+# Fires on `v*` tag push. Publishes @luxfi/brand to npmjs.org.
+# Requires repo secret `NPM_TOKEN` (npm automation token with publish scope).
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: lux-build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install
+        run: npm install --ignore-scripts
+      - name: Build
+        run: npm run build
+      - name: Publish
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
