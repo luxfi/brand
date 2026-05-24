@@ -13,7 +13,19 @@ export * from './docs'
 // Brand runtime config (brand.json) — single source of truth
 export { brand } from './brand'
 export type { BrandConfig, BrandTheme, RuntimeConfig } from './brand-types'
-export { loadBrand, getBrandUrl, getDocsUrl, getGatewayUrl, getWsUrl, getRpcUrl } from './loader'
+export {
+  loadBrand,
+  resolveBrand,
+  applyConfig,
+  validate as validateBrandConfig,
+  getBrandUrl,
+  getAppUrl,
+  getDocsUrl,
+  getGatewayUrl,
+  getWsUrl,
+  getRpcUrl,
+} from './loader'
+export type { LoadBrandOptions, NamedBrandSource } from './loader'
 
 // Legacy brand config (company info, SEO, social)
 export { brandConfig } from './config'

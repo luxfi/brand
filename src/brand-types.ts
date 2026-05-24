@@ -61,6 +61,9 @@ export interface BrandConfig {
 
   // Domains
   appDomain: string
+  /** Optional app subdomain (e.g. "app.lux.financial") — when the marketing surface
+   * lives at appDomain and the product UI lives at appSubdomain. */
+  appSubdomain?: string
   docsDomain: string
   infoDomain: string
   gatewayDomain: string
