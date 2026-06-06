@@ -13,6 +13,12 @@ export * from './docs'
 // Brand runtime config (brand.json) — single source of truth
 export { brand } from './brand'
 export type { BrandConfig, BrandTheme, RuntimeConfig } from './brand-types'
+
+// Per-field exports of brand.json — enables tree-shaking for Vite/Rolldown
+// consumers (luxfi/bridge#389). Use `import { shortName, primaryColor } from
+// '@luxfi/brand'` instead of `import luxBrandJson from '@luxfi/brand/brand.json'`
+// to avoid bundling the whole JSON literal.
+export * from './fields'
 export {
   loadBrand,
   resolveBrand,
