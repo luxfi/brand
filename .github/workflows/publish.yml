@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   publish:
-    runs-on: lux-build
+    runs-on: evo
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
