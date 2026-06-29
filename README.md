@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="brand" width="880"></p>
+
 # @luxfi/brand
 
 Brand assets, design tokens, and runtime config for Lux.
