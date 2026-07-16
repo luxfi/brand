@@ -26,6 +26,9 @@ jobs:
       - name: Build
         run: npm run build
       - name: Publish
-        run: npm publish --access public --provenance
+        # No --provenance: npm rejects provenance from self-hosted (ARC) runners
+        # (E422 "Only github-hosted runners are supported"). We publish on
+        # lux-build-amd64, so provenance is not available here.
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
