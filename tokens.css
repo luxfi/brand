@@ -1,0 +1,54 @@
+/* GENERATED from brand.json by scripts/tokens.mjs — do not edit.
+   Run `pnpm tokens`. The palette lives in brand.json; this is its projection
+   onto @hanzo/design's semantic tokens.
+
+   Import AFTER @hanzo/design/styles.css:
+     @import "@hanzo/design/styles.css";
+     @import "@luxfi/brand/tokens.css";
+
+   Only what a brand owns is here — ground, ink, accent, edges. The radius scale,
+   the type ramp, spacing, motion and z stay @hanzo/design's. */
+
+:root{
+  --background:#000000;
+  --card:#1A1A1A;
+  --popover:#1A1A1A;
+  --muted:#1A1A1A;
+  --foreground:#FFFFFF;
+  --card-foreground:#FFFFFF;
+  --popover-foreground:#FFFFFF;
+  --accent-foreground:#FFFFFF;
+  --muted-foreground:rgba(255, 255, 255, 0.65);
+  --primary:#FFFFFF;
+  --primary-foreground:#000000;
+}
+
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --background:#FFFFFF;
+    --card:#F9F9F9;
+    --popover:#F9F9F9;
+    --muted:#F9F9F9;
+    --foreground:#131313;
+    --card-foreground:#131313;
+    --popover-foreground:#131313;
+    --accent-foreground:#131313;
+    --muted-foreground:rgba(19, 19, 19, 0.63);
+    --primary:#000000;
+    --primary-foreground:#FFFFFF;
+  }
+}
+
+[data-theme="light"]{
+  --background:#FFFFFF;
+  --card:#F9F9F9;
+  --popover:#F9F9F9;
+  --muted:#F9F9F9;
+  --foreground:#131313;
+  --card-foreground:#131313;
+  --popover-foreground:#131313;
+  --accent-foreground:#131313;
+  --muted-foreground:rgba(19, 19, 19, 0.63);
+  --primary:#000000;
+  --primary-foreground:#FFFFFF;
+}

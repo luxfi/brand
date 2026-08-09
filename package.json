@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/brand",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "Official brand assets and design system for Lux Finance",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,7 +20,8 @@
       "types": "./dist/loader.d.ts"
     },
     "./assets/*": "./assets/*",
-    "./styles/*": "./styles/*"
+    "./styles/*": "./styles/*",
+    "./tokens.css": "./tokens.css"
   },
   "files": [
     "dist",
@@ -30,15 +31,17 @@
     "bridge.json",
     "financial.json",
     "examples",
-    "WHITELABEL.md"
+    "WHITELABEL.md",
+    "tokens.css"
   ],
   "scripts": {
-    "build": "node scripts/assets.mjs && tsup src/index.ts src/loader.ts --format cjs,esm --dts --clean --external react",
+    "build": "node scripts/tokens.mjs && node scripts/assets.mjs && tsup src/index.ts src/loader.ts --format cjs,esm --dts --clean --external react",
     "dev": "tsup src/index.ts src/loader.ts --format cjs,esm --dts --watch --external react",
     "lint": "eslint src",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
-    "assets:check": "node scripts/assets.mjs"
+    "assets:check": "node scripts/assets.mjs",
+    "tokens": "node scripts/tokens.mjs"
   },
   "peerDependencies": {
     "react": ">=18"
