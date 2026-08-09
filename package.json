@@ -1,6 +1,6 @@
 {
   "name": "@luxfi/brand",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Official brand assets and design system for Lux Finance",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -24,7 +24,6 @@
   },
   "files": [
     "dist",
-    "assets",
     "fonts",
     "styles",
     "brand.json",
@@ -34,13 +33,12 @@
     "WHITELABEL.md"
   ],
   "scripts": {
-    "build": "node scripts/assets.mjs --check && tsup src/index.ts src/loader.ts --format cjs,esm --dts --clean --external react",
+    "build": "node scripts/assets.mjs && tsup src/index.ts src/loader.ts --format cjs,esm --dts --clean --external react",
     "dev": "tsup src/index.ts src/loader.ts --format cjs,esm --dts --watch --external react",
     "lint": "eslint src",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
-    "assets": "node scripts/assets.mjs",
-    "assets:check": "node scripts/assets.mjs --check"
+    "assets:check": "node scripts/assets.mjs"
   },
   "peerDependencies": {
     "react": ">=18"
@@ -72,11 +70,13 @@
     "@types/react": "^19.2.14",
     "eslint": "^8.0.0",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
-    "@luxfi/logo": "^1.0.7"
+    "typescript": "^5.9.3"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@luxfi/logo": "1.0.7"
   }
 }

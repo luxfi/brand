@@ -26,8 +26,8 @@
     "tiktok": "",
     "github": "https://github.com/luxfi",
     "discord": "https://discord.gg/lux",
-    "logoUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/logo.svg",
-    "faviconUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/favicon.svg",
+    "logoUrl": "https://cdn.jsdelivr.net/npm/@luxfi/logo@1.0.7/svg/lux-icon-white.svg",
+    "faviconUrl": "https://cdn.jsdelivr.net/npm/@luxfi/logo@1.0.7/svg/lux-icon-white.svg",
     "primaryColor": "#000000",
     "theme": {
       "light": {
@@ -45,7 +45,7 @@
         "neutral2": "rgba(255, 255, 255, 0.65)"
       }
     },
-    "wordmarkUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/wordmark.svg"
+    "wordmarkUrl": "https://cdn.jsdelivr.net/npm/@luxfi/logo@1.0.7/svg/lux-wordmark-white.svg"
   },
   "chains": {
     "defaultChainId": 96369,

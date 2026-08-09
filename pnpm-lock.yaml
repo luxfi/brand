@@ -8,13 +8,13 @@ importers:
 
   .:
     dependencies:
+      '@luxfi/logo':
+        specifier: 1.0.7
+        version: 1.0.7(react@19.2.8)
       react:
         specifier: '>=18'
         version: 19.2.8
     devDependencies:
-      '@luxfi/logo':
-        specifier: ^1.0.7
-        version: 1.0.7(react@19.2.8)
       '@types/node':
         specifier: ^20.0.0
         version: 20.19.39
