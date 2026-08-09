@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "Lux Exchange",
+    "name": "Lux",
     "title": "Lux Exchange | Trade",
     "description": "Multi-chain decentralized exchange powered by Lux Network",
     "shortName": "LUX",
@@ -27,7 +27,7 @@
     "github": "https://github.com/luxfi",
     "discord": "https://discord.gg/lux",
     "logoUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/logo.svg",
-    "faviconUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/favicon.png",
+    "faviconUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/favicon.svg",
     "primaryColor": "#000000",
     "theme": {
       "light": {
@@ -44,11 +44,21 @@
         "neutral1": "#FFFFFF",
         "neutral2": "rgba(255, 255, 255, 0.65)"
       }
-    }
+    },
+    "wordmarkUrl": "https://cdn.jsdelivr.net/npm/@luxfi/brand@latest/assets/logo/wordmark.svg"
   },
   "chains": {
     "defaultChainId": 96369,
-    "supported": [96369, 96368, 96367, 1, 42161, 8453, 137, 43114]
+    "supported": [
+      96369,
+      96368,
+      96367,
+      1,
+      42161,
+      8453,
+      137,
+      43114
+    ]
   },
   "rpc": {
     "96369": "https://api.lux.network/v1/bc/C/rpc",
