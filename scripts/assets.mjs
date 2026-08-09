@@ -44,6 +44,21 @@ const check = process.argv.includes('--check')
 let failed = 0
 mkdirSync(out, { recursive: true })
 
+// Every asset brand.json PROMISES must exist. Derived from the contract rather
+// than listed, so the check cannot drift from what consumers are told to draw —
+// faviconUrl named a .png this package has never contained, and nothing noticed.
+if (check) {
+  const brand = JSON.parse(readFileSync(join(process.cwd(), 'brand.json'), 'utf8')).brand
+  for (const [field, url] of Object.entries(brand)) {
+    if (!/Url$/.test(field) || typeof url !== 'string' || !url.includes('/assets/')) continue
+    const rel = url.slice(url.indexOf('/assets/') + 1)
+    try { readFileSync(join(process.cwd(), rel)) } catch {
+      console.error(`MISSING: ${field} promises ${rel}, which this package does not contain`)
+      failed++
+    }
+  }
+}
+
 for (const [name, src] of Object.entries(MARKS)) {
   const svg = readFileSync(join(logoRoot, src), 'utf8')
   const bad = refuse(name, svg)
