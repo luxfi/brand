@@ -15,6 +15,7 @@
 // brand that redefines them is a fork wearing a stylesheet.
 import { readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { themeToTokens } from '@hanzo/design'
 
 const brand = JSON.parse(readFileSync(join(process.cwd(), 'brand.json'), 'utf8')).brand
 const { theme } = brand
@@ -23,34 +24,11 @@ if (!theme?.dark || !theme?.light) {
   process.exit(1)
 }
 
-// theme key -> the semantic tokens it answers for. A key the brand does not
-// declare emits nothing, so @hanzo/design's own value stands rather than being
-// overwritten with undefined.
-const MAP = {
-  surface1: ['--background'],
-  surface2: ['--card', '--popover', '--muted'],
-  surface3: ['--accent'],
-  neutral1: ['--foreground', '--card-foreground', '--popover-foreground', '--accent-foreground'],
-  neutral2: ['--muted-foreground'],
-  accent1:  ['--primary'],
-  border:   ['--border'],
-  success:  ['--state-success'],
-  warning:  ['--state-warning'],
-  error:    ['--state-error'],
-}
-
-// --primary carries ink on top of it, so it names its own contrast partner.
-const onPrimary = (t) => (t.accent1 && t.surface1 ? t.surface1 : null)
-
+// The MAPPING is @hanzo/design's — it owns the semantic token names, a brand owns
+// the values, and neither carries a copy of the other. This file only decides
+// where the result is written and under which selectors.
 function block(t) {
-  const out = []
-  for (const [key, tokens] of Object.entries(MAP)) {
-    if (!t[key]) continue
-    for (const name of tokens) out.push(`  ${name}:${t[key]};`)
-  }
-  const fg = onPrimary(t)
-  if (fg) out.push(`  --primary-foreground:${fg};`)
-  return out.join('\n')
+  return Object.entries(themeToTokens(t)).map(([name, value]) => `  ${name}:${value};`).join('\n')
 }
 
 const css = `/* GENERATED from brand.json by scripts/tokens.mjs — do not edit.
