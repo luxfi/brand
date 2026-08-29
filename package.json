@@ -44,7 +44,7 @@
     "tokens": "node scripts/tokens.mjs"
   },
   "peerDependencies": {
-    "react": ">=18"
+    "react": ">=19.2.8"
   },
   "peerDependenciesMeta": {
     "react": {
@@ -69,19 +69,19 @@
   },
   "homepage": "https://github.com/luxfi/brand",
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^19.2.14",
-    "eslint": "^8.0.0",
-    "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
-    "@hanzo/design": "0.5.24"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "eslint": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:",
+    "@hanzo/design": "catalog:"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@luxfi/logo": "1.0.10"
+    "@luxfi/logo": "catalog:"
   },
   "packageManager": "pnpm@11.24.0"
 }
