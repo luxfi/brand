@@ -46,7 +46,6 @@ White-label users of the OSS Lux brand system bring their own brand package; the
 
 ## Font
 
-**Geist Sans** (body) + **Geist Mono** (code). Loaded from Google Fonts or self-hosted in `fonts/`.
 
 ## Logo
 
