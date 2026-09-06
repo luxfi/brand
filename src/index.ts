@@ -5,6 +5,18 @@
 export * from './colors'
 export * from './typography'
 export * from './logos'
+export {
+  Logo,
+  Wordmark,
+  Favicon,
+  logo,
+  wordmark,
+  favicon,
+  lx,
+  LuxLogo,
+  LuxWordmark,
+  LuxFavicon,
+} from '@luxfi/logo'
 export * from './tokens'
 export * from './themes'
 export * from './utils'
