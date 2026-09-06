@@ -39,7 +39,7 @@
     "dev": "tsup src/index.ts src/loader.ts --format cjs,esm --dts --watch --external react",
     "lint": "eslint src",
     "type-check": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "node --test test/exports.test.mjs",
     "assets:check": "node scripts/assets.mjs",
     "tokens": "node scripts/tokens.mjs"
   },
