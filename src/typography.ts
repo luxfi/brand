@@ -5,10 +5,10 @@
 export const typography = {
   // Font families
   fontFamily: {
-    sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+    sans: ['Zen', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
     serif: ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
     mono: ['JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Consolas', 'monospace'],
-    display: ['Inter Display', 'Inter', 'system-ui', 'sans-serif'],
+    display: ['Inter Display', 'Zen', 'system-ui', 'sans-serif'],
   },
 
   // Font sizes
@@ -149,23 +149,7 @@ export const typography = {
 // Font face declarations for custom fonts
 export const fontFaces = `
 @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/fonts/inter-var.woff2') format('woff2-variations');
-}
-
-@font-face {
-  font-family: 'Inter Display';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/fonts/inter-display-var.woff2') format('woff2-variations');
-}
-
-@font-face {
-  font-family: 'JetBrains Mono';
+  font-family: Zen Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   font-style: normal;
   font-weight: 100 800;
   font-display: swap;
