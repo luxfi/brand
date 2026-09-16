@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   publish:
-    runs-on: lux-build-amd64
+    runs-on: linux-amd64
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
