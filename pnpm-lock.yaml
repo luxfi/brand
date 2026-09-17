@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@luxfi/logo':
-        specifier: 1.0.8
-        version: 1.0.8(react@19.2.8)
+        specifier: 1.0.11
+        version: 1.0.11(react@19.2.8)
       react:
         specifier: '>=18'
         version: 19.2.8
@@ -383,8 +383,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@luxfi/logo@1.0.8':
-    resolution: {integrity: sha512-abuJPgtql/Up3ZBN8ii1Yu571I/iAMHiBtNcxkO1oLrjgwv0JI7TKPoO/X6dfiY92omRnzu40Nsq6tmIz/ljIQ==}
+  '@luxfi/logo@1.0.11':
+    resolution: {integrity: sha512-PVMpbQrGdh5pJwB8XgiXk6UDHZ3RZ2nrpyB95Qr6jS572XGLshFOPUTd2Ryj8BX9FB+diDOAOxMk3AqwHGRDuQ==}
     peerDependencies:
       react: '>=16.8.0'
     peerDependenciesMeta:
@@ -1439,7 +1439,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@luxfi/logo@1.0.8(react@19.2.8)':
+  '@luxfi/logo@1.0.11(react@19.2.8)':
     dependencies:
       sharp: 0.34.5
     optionalDependencies:

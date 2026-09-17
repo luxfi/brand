@@ -82,6 +82,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@luxfi/logo": "1.0.8"
+    "@luxfi/logo": "1.0.11"
   }
 }
